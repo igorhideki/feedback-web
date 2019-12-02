@@ -1,21 +1,26 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+import colors from '../../styles/colors'
+
 export const Container = styled.button`
   background: ${props => {
-    if (props.secondary) {
-      return '#4DBAF9';
+    switch (props.type) {
+      case 'primary':
+        return colors.primary;
+      case 'secondary':
+        return colors.secondary;
+      case 'danger':
+        return colors.danger;
+      default:
+        return colors.primary;
     }
-    if (props.danger) {
-      return '#D44059';
-    }
-    return '#f94d6a';
   }};
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  height: 42px;
-  padding: 0 21px;
+  height: 40px;
+  padding: 0 16px;
   border-radius: 4px;
   transition: background 0.2s;
   border: 0;
@@ -24,13 +29,16 @@ export const Container = styled.button`
 
   &:hover {
     background: ${props => {
-      if (props.secondary) {
-        return darken(0.08, '#4DBAF9');
+      switch (props.type) {
+        case 'primary':
+          return darken(0.1, colors.primary);
+        case 'secondary':
+          return darken(0.1, colors.secondary);
+        case 'danger':
+          return darken(0.1, colors.danger);
+        default:
+          return darken(0.1, colors.primary);
       }
-      if (props.danger) {
-        return darken(0.03, '#D44059');
-      }
-      return darken(0.03, '#f94d6a');
     }};
   }
 
