@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   min-height: 100%;
-  background: linear-gradient(-45deg, #fbfdff, #e7f3ff);
+  background: #f8f9fe;
 `;
 
 export const Container = styled.div`
