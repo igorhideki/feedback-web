@@ -5,7 +5,7 @@ import colors from '../../styles/colors'
 
 export const Container = styled.button`
   background: ${props => {
-    switch (props.type) {
+    switch (props.color) {
       case 'primary':
         return colors.primary;
       case 'secondary':
@@ -26,10 +26,11 @@ export const Container = styled.button`
   border: 0;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
   &:hover {
     background: ${props => {
-      switch (props.type) {
+      switch (props.color) {
         case 'primary':
           return darken(0.1, colors.primary);
         case 'secondary':
