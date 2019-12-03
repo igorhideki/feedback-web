@@ -24,10 +24,6 @@ export const Action = styled.li`
     }
   }
 
-  & + li {
-    margin-left: 16px;
-  }
-
   h3 {
     color: ${colors.secondary};
     margin-top: 4px;
