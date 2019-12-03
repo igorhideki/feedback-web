@@ -1,25 +1,33 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
+import { signOut } from '../../store/modules/auth/actions';
 import { Container, Content, Profile } from './styles';
 import Button from '../Button';
 
 export default function Header() {
+  const profile = useSelector(state => state.user.profile);
+  const dispatch = useDispatch();
+
+  function handleSignOut() {
+    console.tron.log('teste');
+    dispatch(signOut());
+  }
+
   return (
     <Container>
       <Content>
         <nav>
-          <a to="/dashboard">
-            Feedback App
-          </a>
+          <Link to="/dashboard">Feedback App</Link>
         </nav>
 
         <aside>
           <Profile>
-            <strong>Nome usuário</strong>
-            <a to="/profile">Meu perfil</a>
+            <strong>{profile.name}</strong>
+            <a href="/">Meu perfil</a>
           </Profile>
-          <Button type="danger">
+          <Button color="danger" onClick={handleSignOut}>
             Sair
           </Button>
         </aside>
