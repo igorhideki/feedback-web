@@ -16,8 +16,10 @@ export default function Dashboard() {
         <Action>
           <Link to="/feedbacks">
             <Card>
-              <FiThumbsUp size={30} color={colors.primary} />
-              <h3>Feedbacks solicitados</h3>
+              <div>
+                <FiThumbsUp size={30} color={colors.primary} />
+                <h3>Feedbacks solicitados</h3>
+              </div>
             </Card>
           </Link>
         </Action>
@@ -26,16 +28,20 @@ export default function Dashboard() {
             <Action>
               <Link to="/review">
                 <Card>
-                  <FiCalendar size={30} color={colors.primary} />
-                  <h3>Criar revisão</h3>
+                  <div>
+                    <FiCalendar size={30} color={colors.primary} />
+                    <h3>Criar revisão</h3>
+                  </div>
                 </Card>
               </Link>
             </Action>
             <Action>
               <Link to="/users">
                 <Card>
-                  <FiUser size={30} color={colors.primary} />
-                  <h3>Usuários</h3>
+                  <div>
+                    <FiUser size={30} color={colors.primary} />
+                    <h3>Usuários</h3>
+                  </div>
                 </Card>
               </Link>
             </Action>
