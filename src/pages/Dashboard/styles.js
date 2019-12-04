@@ -14,14 +14,12 @@ export const Actions = styled.ul`
 export const Action = styled.li`
   width: 100%;
   text-align: center;
-  transition: box-shadow 0.2s;
+  transition: all 0.2s;
+  border: 1px solid #fff;
+  border-radius: 8px;
 
   &:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
-    h3 {
-      opacity: 0.8;
-    }
+    border-color: ${colors.lightGray};
   }
 
   h3 {
