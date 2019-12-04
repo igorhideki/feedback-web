@@ -14,11 +14,11 @@ export default function Dashboard() {
     <Container>
       <Actions>
         <Action>
-          <Link to="/feedbacks">
+          <Link to="/reviews">
             <Card>
               <div>
                 <FiThumbsUp size={30} color={colors.primary} />
-                <h3>Feedbacks solicitados</h3>
+                <h3>Avaliações solicitadas</h3>
               </div>
             </Card>
           </Link>
