@@ -8,6 +8,10 @@ export const Container = styled.div`
     color: ${colors.secondary};
   }
 
+  p {
+    color: ${colors.darkGray};
+  }
+
   form {
     margin-top: 16px;
 

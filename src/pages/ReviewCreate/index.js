@@ -5,7 +5,7 @@ import api from '../../services/api';
 import Button from '../../components/Button';
 import { Container, SelectWrapper, SelectLabel, Select, Error } from './styles';
 
-export default function Review() {
+export default function ReviewCreate() {
   const [reviewer, setReviewer] = useState({});
   const [reviewed, setReviewed] = useState({});
   const [error, setError] = useState('');
@@ -30,7 +30,7 @@ export default function Review() {
     loadUsers();
   }, []);
 
-  async function handleOnSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const data = {
@@ -59,7 +59,7 @@ export default function Review() {
         receberá.
       </p>
 
-      <form onSubmit={handleOnSubmit}>
+      <form onSubmit={handleSubmit}>
         <SelectWrapper>
           <SelectLabel>Revisor</SelectLabel>
           <Select
