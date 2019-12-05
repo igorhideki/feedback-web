@@ -7,6 +7,7 @@ import Dashboard from '../pages/Dashboard';
 import Feedback from '../pages/Feedback';
 import ReviewCreate from '../pages/ReviewCreate';
 import ReviewIndex from '../pages/ReviewIndex';
+import Users from '../pages/Users';
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
       <Route path="/feedback/:id" component={Feedback} isPrivate />
       <Route path="/review" component={ReviewCreate} isPrivate />
       <Route path="/reviews" component={ReviewIndex} isPrivate />
+      <Route path="/users" component={Users} isPrivate />
       <Route path="/" component={() => <h1>Error 404. Page not found</h1>} />
     </Switch>
   );
