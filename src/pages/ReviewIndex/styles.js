@@ -24,7 +24,6 @@ export const Review = styled.li`
   display: flex;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 40px;
   padding: 16px;
   color: ${colors.gray};
   border-radius: 4px;
