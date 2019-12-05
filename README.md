@@ -28,7 +28,7 @@ Abaixo estão as funcionalidades da aplicação.
 - Autenticação de usuário
 - Atribuição de revisão de desempenho
 - Envio de feedback
-- Listagem de revisões que precisão de feedback
+- Listagem de revisões que precisam de feedback
 - Listagem de usuários
 
 ## Links
